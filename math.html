@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            border-radius: 30px;
+            text-align: center;
+        }
+        body {
+            background-color :pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: navy;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        function check(){
+            radius=document.getElementById('radius').value;
+            height=document.getElementById('height').value;
+            result=document.getElementById('result');
+            area =  2*(3.14)*radius*height + 2*(3.14)*radius*radius;
+            result.value = area;
+        }
+    </script>
+    <center>
+
+        <h1>Surface Area of Cylinder</h1>
+
+        <h2>Radius : <input size="30px" type="text"  name="radius" id="radius" placeholder="Enter the Radius of the cylinder">m <br> <br>
+        Height : <input type="text" size="30px" name="height" id="height" placeholder="Enter the Height of the cylinder">m <br><br>
+        <button type="button" onclick="check()">AREA</button> <br> <br>
+        Output : <input type="text" size="30px" name="result" id="result" placeholder="Output"> m<sup>2</sup></span></h2>
+    </center>
+</body>
+</html>
