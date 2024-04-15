@@ -51,14 +51,25 @@ Publish the website in the given URL.
             align-items: center;
             height: 100vh;
             margin: 0;
-            color: navy;
 
         }
         
     </style>
 </head>
-<body>
+<body name="body" id="body">
     <script>
+        let number=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+        function changeColor(){
+            hexcode='';
+            for(let i=0;i<6;i++){
+                random1=Math.floor(Math.random()*number.length);
+                hexcode+=number[random1];
+            }
+            hexcode="#"+hexcode;
+            let b=document.getElementById('body');
+            b.style.backgroundColor=hexcode;
+        }
+        setInterval('changeColor()',100);
         function check(){
             radius=document.getElementById('radius').value;
             height=document.getElementById('height').value;
@@ -86,7 +97,7 @@ Publish the website in the given URL.
 ## OUTPUT:
 ![out1](https://github.com/KGSatheeshKumar/MathServer/assets/128453421/4782c02a-29e6-4510-be1f-28969d3d675f)
 
-![out2](https://github.com/KGSatheeshKumar/MathServer/assets/128453421/4ef70c7c-86e2-4250-975f-b92d9e0f52ed)
+![out3](https://github.com/KGSatheeshKumar/MathServer/assets/128453421/82cf5d03-fba3-4d36-b7ca-1124d7bf810f)
 
 
 ## RESULT:
